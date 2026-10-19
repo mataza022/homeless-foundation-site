@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homeless Child & Widows Foundation | Mombasa, Kenya</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <img src="assets/logo.jpeg" alt="Foundation Logo" class="logo-img" />
+          <div class="logo-text">Homeless Child <span>& Widows</span></div>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#maweni">Maweni Home</a></li>
+          <li><a href="#donate">Donate</a></li>
+          <li>
+            <button class="btn btn-primary" id="volunteerBtnNav" style="padding: 10px 24px">Volunteer</button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-background">
+        <div class="hero-bg-image active" id="bg-image-1" style="background-image: url('assets/home.jpeg')"></div>
+        <div class="hero-bg-image" id="bg-image-2" style="background-image: url('assets/home2.jpeg')"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-location">Mombasa · Nyali · Maweni</span>
+          <h1>Restoring Hope. <em>Building Futures.</em></h1>
+          <p>We are dedicated to rescuing homeless children and empowering widows across Kenya through shelter, education, and sustainable community support.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="donateBtnHero">Donate Now</button>
+            <button class="btn btn-outline" id="learnMoreBtn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-indicators">
+        <div class="bg-indicator active" data-bg="1"></div>
+        <div class="bg-indicator" data-bg="2"></div>
+      </div>
+    </section>
+
+    <!-- Impact Stats Section (Sea of Hope Style) -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div>
+          <div class="stat-number">6+</div>
+          <div class="stat-label">Years of Service</div>
+        </div>
+        <div>
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Children Rescued</div>
+        </div>
+        <div>
+          <div class="stat-number">45+</div>
+          <div class="stat-label">Widows Empowered</div>
+        </div>
+        <div>
+          <div class="stat-number">18,000+</div>
+          <div class="stat-label">Meals Served</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Mission Section -->
+    <section class="section-light" id="about">
+      <div class="container about-grid">
+        <div class="about-text">
+          <span class="eyebrow">Who We Are</span>
+          <h2>Our Mission</h2>
+          <p>Started in January 2020 as a response to the COVID-19 crisis, the Homeless Child & Widows Foundation is a registered Kenyan NGO (Reg: <strong>D7UNKJV</strong>) dedicated to relieving poverty and improving access to quality education and healthcare.</p>
+          <p>We operate across Mombasa, Kilifi, Nyandarua, Nairobi, and Lamu, running three distinct wings: Children's Rescue, Women's Empowerment, and Youth Empowerment.</p>
+          <ul class="mission-list">
+            <li>Rescue and shelter homeless, orphaned, and vulnerable children</li>
+            <li>Empower widows with skills, microfinance, and business support</li>
+            <li>Provide food, clothing, and medical care to those in extreme poverty</li>
+            <li>Pay school fees and provide learning materials for needy students</li>
+          </ul>
+        </div>
+        <div class="about-image" style="background-image: url('assets/home.jpeg');"></div>
+      </div>
+    </section>
+
+    <!-- Programs / Wings Section -->
+    <section class="section-cream" id="programs">
+      <div class="container">
+        <span class="eyebrow">What We Do</span>
+        <h2>Our Empowerment Wings</h2>
+        <p class="section-subtitle">All three categories are registered separately under the umbrella of the main foundation.</p>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-child"></i></div>
+            <h3>Children's Rescue Wing</h3>
+            <p>Providing immediate intervention, safe shelter, food, and education for homeless, orphaned, and disabled children.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-female"></i></div>
+            <h3>Women's Empowerment Wing</h3>
+            <p>Supporting widows through skills training, microfinance programs, and business startups to achieve financial independence.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-users"></i></div>
+            <h3>Youth Empowerment Wing</h3>
+            <p>Providing education support, grants, and equipment for young people to establish sustainable livelihoods.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maweni Rescue Home (Featured Project) -->
+    <section class="section-light" id="maweni">
+      <div class="container about-grid">
+        <div class="about-text">
+          <span class="eyebrow">Flagship Project</span>
+          <h2>Maweni Children Rescue Home</h2>
+          <p>Located in Mombasa, the Maweni Rescue Home provides a safe haven for street orphans and vulnerable children who have nowhere else to call home. Here, they receive shelter from the cold nights and heavy rains, hot meals, and access to education.</p>
+          <p>We are currently renting a large house to serve these children. Our long-term goal is to buy land and build a permanent, self-sustaining rescue home rather than spending funds on rent.</p>
+          <button class="btn btn-primary" id="supportMaweniBtn" style="margin-top: 20px;">Support the Rescue Home</button>
+        </div>
+        <div class="about-image" style="background-image: url('assets/home2.jpeg');"></div>
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="section-dark" id="donate">
+      <div class="container">
+        <span class="eyebrow" style="color: var(--secondary)">Make a Difference</span>
+        <h2>Support Our Work</h2>
+        <p class="section-subtitle">90% of every donation goes directly to our programs. Choose the giving method that works for you.</p>
+
+        <div class="donation-container">
+          <div class="donation-text">
+            <h3>Transform Lives Today</h3>
+            <p>Your donation helps us rescue children from the streets, provide meals, pay school fees, and give widows the tools they need to start businesses.</p>
+            <ul>
+              <li>KES 1,000 provides meals for a child for a week</li>
+              <li>KES 5,000 buys school uniforms and supplies</li>
+              <li>KES 20,000 funds a widow's small business startup</li>
+            </ul>
+            <button class="btn btn-primary" id="sponsorChildBtn" style="margin-top: 20px;">Sponsor a Child</button>
+          </div>
+
+          <div class="donation-methods">
+            <h3>Donation Methods</h3>
+            
+            <div class="donation-method">
+              <div class="method-icon"><i class="fas fa-mobile-alt"></i></div>
+              <div>
+                <h4>M-PESA Paybill</h4>
+                <p><strong>Paybill Number:</strong> 891300</p>
+                <p><strong>Account Number:</strong> Your Name</p>
+                <button class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem; margin-top: 10px;" id="mpesaBtn">Copy Details</button>
+              </div>
+            </div>
+
+            <div class="donation-method">
+              <div class="method-icon"><i class="fas fa-university"></i></div>
+              <div>
+                <h4>Bank Transfer</h4>
+                <p><strong>Bank:</strong> Kenya Commercial Bank</p>
+                <p><strong>Account Name:</strong> Homeless Child & Widows Foundation</p>
+                <p><strong>Account Number:</strong> 1123456789</p>
+                <button class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem; margin-top: 10px;" id="bankBtn">Copy Details</button>
+              </div>
+            </div>
+
+            <div class="donation-method" style="border-bottom: none;">
+              <div class="method-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>International Donations</h4>
+                <p>Contact us for PayPal or wire transfer details.</p>
+                <p><strong>Email:</strong> homelesschild.rescuefoundation@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/logo.jpeg" alt="Logo" style="height: 60px; margin-bottom: 20px; border-radius: 8px;">
+            <p>Registered Non-Profit in Kenya dedicated to rescuing homeless children and empowering widows through sustainable programs.</p>
+            <p><strong>NGO Reg:</strong> D7UNKJV</p>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#maweni">Maweni Home</a></li>
+              <li><a href="#donate">Donate</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Contact Information</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Fair Deal RM5, Nyali, Mombasa</p>
+            <p><i class="fas fa-envelope"></i> homelesschild.rescuefoundation@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +254 712 555 336</p>
+            <p><i class="fas fa-phone"></i> +254 726 337 360</p>
+          </div>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; 2026 Homeless Child & Widows Foundation. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals (Donation, Volunteer, Sponsor) -->
+    <!-- Donation Modal -->
+    <div class="modal" id="donationModal">
+      <div class="modal-content">
+        <button class="modal-close" id="donationModalClose">&times;</button>
+        <h2>Make a Donation</h2>
+        <p>Thank you for supporting our mission.</p>
+        <div class="form-group">
+          <label>Donation Purpose</label>
+          <select id="donationPurpose">
+            <option value="general">General Support</option>
+            <option value="child-rescue">Child Rescue</option>
+            <option value="widow-empowerment">Widow Empowerment</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Amount (KES)</label>
+          <input type="number" id="donationAmount" placeholder="Enter amount" min="100" />
+        </div>
+        <div class="form-group">
+          <label>Method</label>
+          <select id="donationMethod">
+            <option value="mpesa">M-PESA Paybill</option>
+            <option value="bank">Bank Transfer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="donorName" placeholder="Full name" />
+        </div>
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" id="donorEmail" placeholder="Email address" />
+        </div>
+        <button class="btn btn-primary" id="submitDonationBtn" style="width: 100%;">Proceed</button>
+      </div>
+    </div>
+
+    <!-- Volunteer Modal -->
+    <div class="modal" id="volunteerModal">
+      <div class="modal-content">
+        <button class="modal-close" id="volunteerModalClose">&times;</button>
+        <h2>Volunteer with Us</h2>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="volunteerName" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="volunteerEmail" />
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="volunteerPhone" />
+        </div>
+        <button class="btn btn-primary" id="submitVolunteerBtn" style="width: 100%;">Submit</button>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <span id="notificationMessage"></span>
+      <button class="notification-close" id="notificationClose">&times;</button>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
