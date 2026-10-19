@@ -78,30 +78,35 @@
         <div class="services-grid">
           <div class="service-card">
             <div class="service-content">
+              <div class="mission-icon-wrapper"><i class="fas fa-child"></i></div>
               <h3>Homeless Child Rescue & Protection</h3>
               <p>Providing immediate intervention, safe shelter, and comprehensive care for homeless, vulnerable and abandoned children through our rescue homes.</p>
             </div>
           </div>
           <div class="service-card">
             <div class="service-content">
+              <div class="mission-icon-wrapper"><i class="fas fa-female"></i></div>
               <h3>Widow Empowerment</h3>
               <p>Supporting widows through skills training, microfinance programs, and business startups to achieve financial independence.</p>
             </div>
           </div>
           <div class="service-card">
             <div class="service-content">
+              <div class="mission-icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
               <h3>Education Support</h3>
               <p>Ensuring access to quality education for rescued homeless children and supporting widows' children through scholarships and school supplies.</p>
             </div>
           </div>
           <div class="service-card">
             <div class="service-content">
+              <div class="mission-icon-wrapper"><i class="fas fa-stethoscope"></i></div>
               <h3>Healthcare Access</h3>
               <p>Providing medical care, nutrition support, and health education to rescued homeless children and vulnerable families.</p>
             </div>
           </div>
           <div class="service-card">
             <div class="service-content">
+              <div class="mission-icon-wrapper"><i class="fas fa-home"></i></div>
               <h3>Safe Housing</h3>
               <p>Building and maintaining safe shelters for rescued homeless children and supporting housing security for widows and their families.</p>
             </div>
@@ -215,40 +220,11 @@
         <h2>Support Our Work</h2>
         <p>Your donation directly impacts the lives of homeless children and widows</p>
         
-        <div class="donation-grid">
-          <div class="donation-card">
+        <div class="donation-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+          <div class="donation-card text-center">
             <h3>Transform Lives with Your Support</h3>
-            <p>With transparency as our cornerstone, we ensure that 90% of every donation goes directly to our programs. We provide regular updates on how funds are used. Your support helps us:</p>
-            <ul class="donation-list">
-              <li>Rescue and shelter homeless children</li>
-              <li>Empower widows through skills and business training</li>
-              <li>Provide education for homeless children and children from vulnerable families</li>
-              <li>Offer healthcare and nutrition support</li>
-              <li>Create sustainable livelihood opportunities</li>
-            </ul>
-          </div>
-          
-          <div class="donation-card">
-            <h3>Donation Methods</h3>
-            
-            <div class="method-item">
-              <h4>Lipa na M-PESA Paybill</h4>
-              <p>Business Number: <strong>4098209</strong></p>
-              <p>Account Number: <strong>Your Two Names</strong></p>
-            </div>
-            
-            <div class="method-item">
-              <h4>Bank Transfer</h4>
-              <p>Bank: Kenya Commercial Bank</p>
-              <p>Account Name: Homeless Child & Widows Foundation</p>
-              <p>Account Number: 1123456789</p>
-              <p>Branch: Nairobi Central</p>
-            </div>
-            
-            <div class="method-item">
-              <h4>International Donations</h4>
-              <p>We accept international donations via PayPal and bank wire transfers. Contact us for details.</p>
-            </div>
+            <p>With transparency as our cornerstone, we ensure that 90% of every donation goes directly to our programs. We provide regular updates on how funds are used.</p>
+            <button class="btn btn-primary" id="donateCtaBtn" style="margin-top: 20px;">Donate via M-PESA</button>
           </div>
         </div>
       </div>
@@ -283,6 +259,15 @@
             <p><i class="fas fa-phone"></i> <a href="tel:+254733181830">+254 733 181 830</a></p>
             <p><i class="fas fa-phone"></i> <a href="tel:+254726337360">+254 726 337 360</a></p>
           </div>
+
+          <div class="footer-links">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/profile.php?id=100050152284174" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+              <a href="https://whatsapp.com/channel/0029Vb6YGf7ADTOCqxTtGL3n" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Channel</a>
+              <a href="https://photos.app.goo.gl/pAPa5cNk598MantH8" target="_blank"><i class="fas fa-images"></i> Photo Gallery</a>
+            </div>
+          </div>
         </div>
         
         <div class="copyright">
@@ -296,38 +281,34 @@
       <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Donation Modal -->
+    <!-- Donation Modal (M-PESA Instructions) -->
     <div class="modal" id="donationModal">
       <div class="modal-content">
         <button class="modal-close" id="donationModalClose">&times;</button>
-        <h2>Make a Donation</h2>
-        <p>Thank you for supporting our mission.</p>
+        <h2>Donate via M-PESA</h2>
+        <p>Your donation directly impacts the lives of homeless children and widows.</p>
         
-        <form name="donation" method="POST" data-netlify="true" id="donationForm">
-          <input type="hidden" name="form-name" value="donation" />
+        <div class="mpesa-instructions">
+          <p><strong>1. Go to M-PESA Menu</strong></p>
+          <p><strong>2. Select Lipa na M-PESA</strong></p>
+          <p><strong>3. Select Pay Bill</strong></p>
           
-          <div class="form-group">
-            <label>Donation Purpose</label>
-            <select name="purpose" id="donationPurpose">
-              <option value="general">General Support</option>
-              <option value="child-rescue">Child Rescue</option>
-              <option value="widow-empowerment">Widow Empowerment</option>
-            </select>
+          <div class="mpesa-detail">
+            <span>Business Number:</span> 
+            <strong>4098209</strong> 
+            <button class="copy-btn" onclick="copyToClipboard('4098209')">Copy</button>
           </div>
-          <div class="form-group">
-            <label>Amount (KES)</label>
-            <input type="number" name="amount" id="donationAmount" placeholder="Enter amount" min="100" required />
+          
+          <div class="mpesa-detail">
+            <span>Account Number:</span> 
+            <strong>Your Two Names</strong>
           </div>
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" name="name" id="donorName" placeholder="Full name" required />
-          </div>
-          <div class="form-group">
-            <label>Your Email</label>
-            <input type="email" name="email" id="donorEmail" placeholder="Email address" required />
-          </div>
-          <button type="submit" class="btn btn-primary" id="submitDonationBtn" style="width: 100%;">Proceed</button>
-        </form>
+          
+          <p style="margin-top: 15px;"><strong>4. Enter Amount</strong></p>
+          <p><strong>5. Enter M-PESA PIN and Confirm</strong></p>
+        </div>
+        
+        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="document.getElementById('donationModalClose').click()">Close</button>
       </div>
     </div>
 

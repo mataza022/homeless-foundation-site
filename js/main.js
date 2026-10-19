@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Learn More Button Scroll
+  document.getElementById("learnMoreBtn").addEventListener("click", () => {
+    document.querySelector("#missions").scrollIntoView({ behavior: "smooth" });
+  });
+
   // Hero Background Rotation
   let currentBg = 1;
   const totalBgs = 2;
@@ -68,22 +73,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // Open Donation Modals
   document.getElementById("donateBtnHero").addEventListener("click", () => openModal(donationModal));
   document.getElementById("donateNavBtn").addEventListener("click", () => openModal(donationModal));
+  document.getElementById("donateCtaBtn").addEventListener("click", () => openModal(donationModal));
 
   // Notification Logic
   const notification = document.getElementById("notification");
   const notificationMessage = document.getElementById("notificationMessage");
   document.getElementById("notificationClose").addEventListener("click", () => notification.classList.remove("active"));
 
-  function showNotification(message) {
+  window.showNotification = function(message) {
     notificationMessage.textContent = message;
     notification.classList.add("active");
     setTimeout(() => notification.classList.remove("active"), 4000);
   }
 
-  // Handle Form Submission (Fake for now)
-  document.getElementById("submitDonationBtn").addEventListener("click", (e) => {
-    e.preventDefault();
-    closeModal(donationModal);
-    showNotification("Donation recorded! Check your email for instructions.");
-  });
+  // Copy to Clipboard
+  window.copyToClipboard = function(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      showNotification("Copied to clipboard: " + text);
+    }).catch(err => {
+      console.error("Failed to copy: ", err);
+    });
+  };
 });
