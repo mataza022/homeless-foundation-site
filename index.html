@@ -46,7 +46,7 @@
       <div class="hero-overlay"></div>
       
       <div class="container hero-content">
-        <span class="hero-location">Mombasa · Nyali · Maweni</span>
+        <span class="hero-location">Kongowea Maweni · Behind Sineno Primary School</span>
         <h1>Rescuing Homeless Children <br>& Empowering Widows in Kenya</h1>
         <p>Homeless Child & Widows Foundation is dedicated to transforming lives through child rescue initiatives and widow empowerment programs across Kenya. We provide shelter, education, and sustainable support to break cycles of poverty.</p>
         
@@ -59,10 +59,10 @@
       <!-- Overlapping Action Bar -->
       <div class="container action-bar-wrapper">
         <div class="action-bar">
-          <span class="action-label">NEED HELP NOW?</span>
+          <span class="action-label">CONTACT US NOW</span>
           <div class="action-buttons">
-            <a href="tel:+254726337360" class="action-btn call-btn"><i class="fas fa-phone"></i> Call</a>
-            <a href="https://wa.me/254726337360" target="_blank" class="action-btn wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:+254712555336" class="action-btn call-btn"><i class="fas fa-phone"></i> Call</a>
+            <a href="https://wa.me/254712555336" target="_blank" class="action-btn wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             <a href="mailto:homelesschild.rescuefoundation@gmail.com" class="action-btn email-btn"><i class="fas fa-envelope"></i> Email</a>
           </div>
         </div>
@@ -119,14 +119,14 @@
         <div class="contact-grid">
           <div>
             <h3 class="text-secondary mb-4">Official Office Lines</h3>
-            <div class="contact-number">Primary Office Line: +254 712 555 336</div>
-            <div class="contact-number">Secondary Office Line: +254 733 181 830</div>
+            <div class="contact-number"><a href="tel:+254712555336" style="color: white;">+254 712 555 336</a></div>
+            <div class="contact-number"><a href="tel:+254733181830" style="color: white;">+254 733 181 830</a></div>
+            <div class="contact-number"><a href="tel:+254726337360" style="color: white;">+254 726 337 360</a></div>
           </div>
           <div>
-            <h3 class="text-secondary mb-4">Personal Contact Lines</h3>
-            <div class="contact-number">Personal Line 1: +254 726 337 360</div>
-            <div class="contact-number">Personal Line 2: 0732 411 458</div>
-            <div class="contact-number">Personal Line 3: 0722 411 458</div>
+            <h3 class="text-secondary mb-4">Our Location</h3>
+            <p style="color: white; font-size: 1.1rem; margin-bottom: 10px;">We are at Kongowea MAWENI, Behind Sineno Primary School, Mombasa.</p>
+            <p style="color: rgba(255,255,255,0.7);">P.O. Box 89324, 80100</p>
           </div>
         </div>
       </div>
@@ -232,9 +232,9 @@
             <h3>Donation Methods</h3>
             
             <div class="method-item">
-              <h4>M-PESA Paybill</h4>
-              <p>Paybill Number: 891300</p>
-              <p>Account Number: Your Name</p>
+              <h4>Lipa na M-PESA Paybill</h4>
+              <p>Business Number: <strong>4098209</strong></p>
+              <p>Account Number: <strong>Your Two Names</strong></p>
             </div>
             
             <div class="method-item">
@@ -277,10 +277,11 @@
           
           <div class="footer-links">
             <h4>Contact Info</h4>
-            <p><i class="fas fa-map-marker-alt"></i> Fair Deal RM5, Nyali, Mombasa</p>
+            <p><i class="fas fa-map-marker-alt"></i> Kongowea Maweni, Behind Sineno Primary School, Mombasa</p>
             <p><i class="fas fa-envelope"></i> homelesschild.rescuefoundation@gmail.com</p>
-            <p><i class="fas fa-phone"></i> +254 712 555 336</p>
-            <p><i class="fas fa-phone"></i> +254 726 337 360</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+254712555336">+254 712 555 336</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+254733181830">+254 733 181 830</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+254726337360">+254 726 337 360</a></p>
           </div>
         </div>
         
@@ -291,7 +292,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/254726337360" class="floating-wa" target="_blank" title="Chat with us on WhatsApp">
+    <a href="https://wa.me/254712555336" class="floating-wa" target="_blank" title="Chat with us on WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -301,27 +302,32 @@
         <button class="modal-close" id="donationModalClose">&times;</button>
         <h2>Make a Donation</h2>
         <p>Thank you for supporting our mission.</p>
-        <div class="form-group">
-          <label>Donation Purpose</label>
-          <select id="donationPurpose">
-            <option value="general">General Support</option>
-            <option value="child-rescue">Child Rescue</option>
-            <option value="widow-empowerment">Widow Empowerment</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Amount (KES)</label>
-          <input type="number" id="donationAmount" placeholder="Enter amount" min="100" />
-        </div>
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" id="donorName" placeholder="Full name" />
-        </div>
-        <div class="form-group">
-          <label>Your Email</label>
-          <input type="email" id="donorEmail" placeholder="Email address" />
-        </div>
-        <button class="btn btn-primary" id="submitDonationBtn" style="width: 100%;">Proceed</button>
+        
+        <form name="donation" method="POST" data-netlify="true" id="donationForm">
+          <input type="hidden" name="form-name" value="donation" />
+          
+          <div class="form-group">
+            <label>Donation Purpose</label>
+            <select name="purpose" id="donationPurpose">
+              <option value="general">General Support</option>
+              <option value="child-rescue">Child Rescue</option>
+              <option value="widow-empowerment">Widow Empowerment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Amount (KES)</label>
+            <input type="number" name="amount" id="donationAmount" placeholder="Enter amount" min="100" required />
+          </div>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" id="donorName" placeholder="Full name" required />
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" name="email" id="donorEmail" placeholder="Email address" required />
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitDonationBtn" style="width: 100%;">Proceed</button>
+        </form>
       </div>
     </div>
 
